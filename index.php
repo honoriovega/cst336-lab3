@@ -13,52 +13,9 @@ Section: x
 
 <head>
 <title>Lab 3</title>
+<link rel="stylesheet" type="text/css" href="css/theme.css">
 <style>
 
-.rules
-{
-	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-	font-size: 15;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
-
-
-.heading
-{
-	text-align:center;
-	color:gray;
-}
-
-.button
-{
-	background-color:#61B329;
-	width:100px;
-	height:50px;
-	border:1px solid black;
-	margin-left:400px;
-	margin-right:400px;
-}
-
-p
-{
-	text-align:center;
-	font-size: 110%;
-}
-
-.score
-{
-	display:inline-block;
-	align:center;
-float:right; width:44%;
-
-margin-top:20px;
-
-	margin-bottom:10px;
-	font-size: 250%;
-}
 
 </style>
 
