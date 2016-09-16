@@ -1,158 +1,66 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--
-This is a skeleton html file that you can use to get you started on each new
-HTML project
-
-Name: Your Name Here
-Class: CIS 3303
-Section: x
--->
-<html>
-
-<head>
-<title>Lab 3</title>
-<link rel="stylesheet" type="text/css" href="css/theme.css">
-<style>
-
-
-</style>
-
 
 <?php
+$cards = array("images/cards/spades/1.png",
+"images/cards/spades/2.png",
+"images/cards/spades/3.png",
+"images/cards/spades/4.png",
+"images/cards/spades/5.png",
+"images/cards/spades/6.png",
+"images/cards/spades/7.png",
+"images/cards/spades/8.png",
+"images/cards/spades/9.png",
+"images/cards/spades/10.png",
+"images/cards/spades/11.png",
+"images/cards/spades/12.png",
+"images/cards/spades/13.png",
+"images/cards/clubs/1.png",
+"images/cards/clubs/2.png",
+"images/cards/clubs/3.png",
+"images/cards/clubs/4.png",
+"images/cards/clubs/5.png",
+"images/cards/clubs/6.png",
+"images/cards/clubs/7.png",
+"images/cards/clubs/8.png",
+"images/cards/clubs/9.png",
+"images/cards/clubs/10.png",
+"images/cards/clubs/11.png",
+"images/cards/clubs/12.png",
+"images/cards/clubs/13.png",
+"images/cards/diamonds/1.png",
+"images/cards/diamonds/2.png",
+"images/cards/diamonds/3.png",
+"images/cards/diamonds/4.png",
+"images/cards/diamonds/5.png",
+"images/cards/diamonds/6.png",
+"images/cards/diamonds/7.png",
+"images/cards/diamonds/8.png",
+"images/cards/diamonds/9.png",
+"images/cards/diamonds/10.png",
+"images/cards/diamonds/11.png",
+"images/cards/diamonds/12.png",
+"images/cards/diamonds/13.png",
+"images/cards/hearts/1.png",
+"images/cards/hearts/2.png",
+"images/cards/hearts/3.png",
+"images/cards/hearts/4.png",
+"images/cards/hearts/5.png",
+"images/cards/hearts/6.png",
+"images/cards/hearts/7.png",
+"images/cards/hearts/8.png",
+"images/cards/hearts/9.png",
+"images/cards/hearts/10.png",
+"images/cards/hearts/11.png",
+"images/cards/hearts/12.png",
+"images/cards/hearts/13.png",);
 
-/*
-jack = 11 points
-queen = 12 points
-king  = 13 points
-ace = 1 point
-lower or closer to 42 is the winner
-
-values greater than 42 lose automatically
-
-all other cards are worth the number on the card
-
-
-52 cards in a deck
-
-*/
-
-// 1 - 13
-// $deck = array(
-
-//$source = "home/logitech/Desktop/cards/clubs/";
-
-function dealCard()
+$count = 0;
+shuffle($cards);
+foreach($cards as $card)
 {
-	$num = rand(1,13);
+	echo "<img src=\"$card\">";
+	$count++;
 	
-	
-	$names = array("diamonds_","spades_","hearts_","clubs_");
-	
-	
-$file =  $names[rand(0,3)] . $num . ".png";
-echo "<img src=\"$file\">";
+	if($count % 13 == 0)
+		echo "<br>";
 }
-
-function getCardRep()
-{
-	return rand(1,13);
-}
-
-function addPoints(&$player_scores,$i)
-{
-	for($j = 0; $j < rand(4,6); $j++)
-		$player_scores[$i] += rand(1,13);
-
-}
-
-// deal hand to the player
-function dealHandToPlayer($player_number,$score,$index)
-{
-$times = rand(4,6); // 4 to 6 cards;
-
-
-echo "<img src=\"player" .$player_number. ".jpg\" height=\"100\" width=\"100\"></div>";
-for($i = 0; $i < $times; $i++)
-	dealCard();
-
-echo "<div class=\"score\">$score". ($score == $index ? " Winner!": "") ."</div><br>"; // new line after dealing for player
-}
-
-echo "<div class=\"heading\"><h1>SilverJack</h1></div>";
-
-
-$player_scores = array(0,0,0,0);
-
-for($i  = 0; $i < 4; $i++)
-	addPoints($player_scores,$i);
-
-
-$i = 0;
-while($player_scores[$i] > 42)
-{
-	$i++;
-
-}
-
-
-$smallest = $player_scores[$i];
-$index = 0;
-for($j = $i;$j < 4; $j++)
-{
-    if($player_scores[$j] > 42) # if the value is greater than 42 skip it
-        continue;
-    
-    if($player_scores[$j] > $smallest)
-    {
-        $index = $j;
-        $smallest = $player_scores[$j];
-    }
-}
-
-//sort($player_scores);
-// do this 4 times because there are 4 players
-$players = array(1,2,3,4);
-shuffle($players);
-for($i = 0; $i < 4; $i++)
-	dealHandToPlayer($players[$i],$player_scores[$i],$smallest);
-
-
-/*
-foreach($player_scores as $score)
-	echo "$score<br>";
-*/
-
 ?>
-
-
-</head>
-
-<body>
-
-<div class="rules"><pre>
-<!--
-Lab 3: PHP Arrays
-
-Silverjack Game
-
-Rubric:
-
-1) Each player gets the "right amount" of cards to get close to 42 (20pts)
-2) The cards are not duplicated (15pts)
-3) The total points per player is displayed properly (15pts)
-4) The winner(s) is(are) displayed properly with the earned points (15pts)
-5) Players pictures are displayed RANDOMLY (10pts)
-6) Your contribution in GitHub is similar to your teammates (15pts)
-7) There is an external CSS file with 10 rules (10pts)
--->
-<center><button onclick="myFunction()" style="background-color:#66CD00">Play Again</button></center>
-
-<script>
-function myFunction() {
-    location.reload();
-}
-</script>
-</body>
-</html>
