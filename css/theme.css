@@ -1,3 +1,32 @@
+body {
+	margin: 0 auto 0 auto;
+	background-image: url(../images/poker-table-background.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.gameContainer {
+	width: 700px;
+	margin: 0 auto 0 auto;
+	
+}
+
+.player {
+	display: inline-block;
+	padding-right: 5px;
+	width: 120px;
+}
+
+.card {
+	display: inline-block;
+	margin: 0;
+	padding-right: 5px;
+}
+
+.title {
+	text-align: center;
+	margin: 20px auto 20px auto;
+}
 .rules
 {
 	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
@@ -9,12 +38,6 @@
 }
 
 
-.heading
-{
-	text-align:center;
-	color:gray;
-}
-
 .button
 {
 	background-color:#61B329;
@@ -25,20 +48,14 @@
 	margin-right:400px;
 }
 
-p
-{
-	text-align:center;
-	font-size: 110%;
-}
 
 .score
 {
 	display:inline-block;
 	align:center;
-float:right; width:44%;
-
-margin-top:20px;
-
+    float:right; 
+    width:44%;
+	margin-top:20px;
 	margin-bottom:10px;
 	font-size: 250%;
 }
