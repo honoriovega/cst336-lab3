@@ -87,12 +87,21 @@ dealHands($scores,$playerHands);
 $outcome = playOutcome($scores);
 
 
+$playerPicutres = array("images/players/player1.jpg",
+                        "images/players/player2.jpg",
+                        "images/players/player3.jpg",
+                        "images/players/player4.jpg");
+$indexes = array(0,1,2,3);
+shuffle($indexes);
 // displays players and cards
 echo "<div class='gameContainer'>";
 // nested loop to print the hands of each player
 for($i = 0; $i < count($playerHands); $i++) {
+    $key = $indexes[$i];
         // Need to add scores to shuffle the picture on each reload
-	echo "<div class='player'><img src='images/players/player" .($i+1) . ".jpg'></div>";
+        
+    // img src='$playerPicutres[$key]'>
+    echo "<div class='player'><img src='$playerPicutres[$key]'></div>";
 	echo "<div class='dealtHand'>";
 	for($j = 0; $j < count($playerHands[$i]); $j++)
 		echo "<div class='card'><img src=\"". $playerHands[$i][$j] . "\"></div>";
@@ -103,10 +112,13 @@ for($i = 0; $i < count($playerHands); $i++) {
 echo "</div> ";
 
 if($outcome == -1)
-    echo "<div style='text-align: center' style=\"background-color:red\"><h1>No Winner </h1></div>";
+    echo "<div class ='message'><h1>No Winner </h1></div>";
 
 else if($outcome == -2)
-    echo "<div style='text-align: center' style=\"background-color:red\"><h1>There was a tie </h1></div>";
+    echo "<div class ='message'><h1>There was a tie </h1></div>";
+
+
+s
 
 ?>
 
@@ -117,6 +129,6 @@ function myFunction() {
 </script>
 <!-- Button to refresh the page -->
 <center><button onclick="myFunction()" style="background-color:#66CD00">Play Again</button></center>
-
+<div class="mydiv"></div>
 </body>
 </html>
