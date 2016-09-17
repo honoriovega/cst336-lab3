@@ -1,5 +1,4 @@
 <?php
-
 $cards = [];
 
 //get cards
@@ -22,6 +21,7 @@ function printCards($cards){
 			echo "<br>";
 	}
 }
+// in order
 
 // print shuffled deck
 echo "<br>Shuffle<br>";
@@ -30,7 +30,7 @@ printCards($cards);
 
 // get sorted deck
 echo "<br><br>Sorted<br>";
-sort($cards);
+natsort($cards);
 printCards($cards);
 
 ?>
