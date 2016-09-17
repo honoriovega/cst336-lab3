@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<div class='title'>><img src='images/Silverjack.png'></div>
+<div class='title'><img src='images/Silverjack.png'></div>
 <?php
 
 // Count the number of occurences in an array
@@ -77,25 +77,27 @@ function dealHands(&$scores, &$playerHands) {
     }
 }
 
+
 $playerHands = array(); // will hold the players hand
 $scores = array();	    // keep track of the scores
 
 dealHands($scores,$playerHands);
 
-
 // was it a tie ? who won ? was their no winner ?
 $outcome = playOutcome($scores);
 
 
+// displays players and cards
 echo "<div class='gameContainer'>";
 // nested loop to print the hands of each player
 for($i = 0; $i < count($playerHands); $i++) {
     // change it here to show picture
-	echo "<div class='player'><img src='images/players/player" .($i+1) . ".jpg'></div> "; 
+	echo "<div class='player'><img src='images/players/player" .($i+1) . ".jpg'></div>";
+	echo "<div class='dealtHand'>";
 	for($j = 0; $j < count($playerHands[$i]); $j++)
 		echo "<div class='card'><img src=\"". $playerHands[$i][$j] . "\"></div>";
-    echo "$scores[$i]"; // print their score
-    echo $i == $outcome ? " Winner!<br>" : "<br>"; // logic to display
+    echo "</div><div class='outcome'><div>$scores[$i]"; // print their score
+    echo $i == $outcome ? " Winner!</div></div><br>" : "</div></div><br>"; // logic to display
 												  // winner
 }
 echo "</div> ";
