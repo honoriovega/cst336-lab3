@@ -45,7 +45,7 @@ function playOutcome($scores) {
 }
 
 // All pass by reference values
-function dealHand(&$scores, &$playerHands) {
+function dealHands(&$scores, &$playerHands) {
     $cards = [];
 
     //get cards
@@ -59,30 +59,29 @@ function dealHand(&$scores, &$playerHands) {
     // shuffle cards
      //shuffle cards
     shuffle($cards);
+    $index=0;
     
     // How many cards to deal
-    $numCards = rand(4,6);
-    $score = 0;
-    
-    $dealtHand=[];
-    
-    for($i=0; $i<$numCards; $i++) {
-        $card = $cards[$i];
-        array_push($dealtHand, $card);
-    	$score +=  basename($card, ".png");
-       }
-
-    array_push($scores, $score);
-    array_push($playerHands, $dealtHand);
+    // deal hand to 4 players
+    for($i = 0; $i < 4; $i++) {
+        $numCards = rand(4,6);
+        $score = 0;
+        $dealtHand=[];
+        for($j=0; $j<$numCards; $j++) {
+            $card = $cards[$index++];
+            array_push($dealtHand, $card);
+    	    $score +=  basename($card, ".png");
+        }
+        array_push($scores, $score);
+        array_push($playerHands, $dealtHand);
+    }
 }
 
 $playerHands = array(); // will hold the players hand
 $scores = array();	    // keep track of the scores
 
-// deal hand to 4 players
-for($i = 0; $i < 4; $i++) {
-   dealHand($scores,$playerHands);
-}
+dealHands($scores,$playerHands);
+
 
 // was it a tie ? who won ? was their no winner ?
 $outcome = playOutcome($scores);
