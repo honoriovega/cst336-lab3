@@ -1,6 +1,0 @@
-card_back.png
-clubs
-diamonds
-files.txt
-hearts
-spades
