@@ -91,7 +91,7 @@ $outcome = playOutcome($scores);
 echo "<div class='gameContainer'>";
 // nested loop to print the hands of each player
 for($i = 0; $i < count($playerHands); $i++) {
-    // change it here to show picture
+        // Need to add scores to shuffle the picture on each reload
 	echo "<div class='player'><img src='images/players/player" .($i+1) . ".jpg'></div>";
 	echo "<div class='dealtHand'>";
 	for($j = 0; $j < count($playerHands[$i]); $j++)
@@ -103,10 +103,10 @@ for($i = 0; $i < count($playerHands); $i++) {
 echo "</div> ";
 
 if($outcome == -1)
-    echo "<div style='text-align: center'><h1>No Winner </h1></div>";
+    echo "<div style='text-align: center' style=\"background-color:red\"><h1>No Winner </h1></div>";
 
 else if($outcome == -2)
-    echo "<div style='text-align: center'><h1>There was a tie </h1></div>";
+    echo "<div style='text-align: center' style=\"background-color:red\"><h1>There was a tie </h1></div>";
 
 ?>
 
