@@ -96,8 +96,8 @@ for($i = 0; $i < count($playerHands); $i++) {
 	echo "<div class='dealtHand'>";
 	for($j = 0; $j < count($playerHands[$i]); $j++)
 		echo "<div class='card'><img src=\"". $playerHands[$i][$j] . "\"></div>";
-    echo "</div><div class='outcome'><div>$scores[$i]"; // print their score
-    echo $i == $outcome ? " Winner!</div></div><br>" : "</div></div><br>"; // logic to display
+    echo "<div class='outcome'><div class='outcome'>$scores[$i]"; // print their score
+    echo $i == $outcome ? "</div><img class='winner' src='images/Winner.png'></div></div><br>" : "</div></div></div><br>"; // logic to display
 												  // winner
 }
 echo "</div> ";
@@ -110,13 +110,15 @@ else if($outcome == -2)
 
 ?>
 
+
+
 <script>
 function myFunction() {
     location.reload();
 }
 </script>
 <!-- Button to refresh the page -->
-<center><button onclick="myFunction()" style="background-color:#66CD00">Play Again</button></center>
+<center><button onclick="myFunction()" style="background-color:#66CD00; margin-top: 10px">Play Again</button></center>
 
 </body>
 </html>
