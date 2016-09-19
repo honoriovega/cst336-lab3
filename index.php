@@ -63,9 +63,8 @@ echo "</h1></div>";
 
 <body>
 
-</body>
 
-</html>
+
 
 <script>
 function myFunction() {
@@ -79,3 +78,4 @@ function myFunction() {
 <!-- Button to refresh the page -->
 
 </body>
+</html>

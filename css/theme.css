@@ -1,7 +1,7 @@
 .title {
     text-align: center;
     margin: 10px auto 10px auto;
-    //background-color:black;
+
     margin-bottom:-10px;
 }
 
@@ -11,14 +11,14 @@
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow:hidden;
 }
 
 .gameContainer {
-width:800px;
+	width:800px;
 
-margin: 0 auto 0 auto;
-
-	//background-color:yellow;
+	margin: 0 auto 0 auto;
+	overflow:hidden;
 	text-align:center;
 }
 
@@ -26,19 +26,17 @@ margin: 0 auto 0 auto;
 	width: 72px;
 	height: 96px;
 	padding-left:12px;
-	//background-color:green;
 
 	display:inline-block;
 }
 
 .row {
-	//background-color:red;
 
 	display:inline-block;
 }
 
 .player {
-	//background-color:blue;
+
 	width:96px;
 	height:96px;
 	display:inline-block;
@@ -48,53 +46,43 @@ margin: 0 auto 0 auto;
 .score {
 	width:50px;
 	height:96px;
-	//background-color:orange;
 	display:inline-block;
 	overflow: auto;
-	
 	padding-left:10px;
 
-	
     font-family: Roboto Slab;
     font-size: 35px;
     font-weight: bold;
-	
-	
 
-	line-height: 96px; 
- 
+	line-height: 96px;
+
     overflow-x: visible;
-  
-
+overflow:hidden;
     color: #b30000;
     text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
     margin-top: 10px;
-   
+
 }
 
 .winner
 {
 	width:120px;
 	height:96;
-	//background-color:black;
 
 	display:inline-block;
-    font-family: Roboto Slab;
-    font-size: 25px;
-    font-weight: bold;
-	
-		overflow: auto;
-	
+	font-family: Roboto Slab;
+	font-size: 25px;
+	font-weight: bold;
 
+	overflow: auto;
 
-	line-height: 96px; 
- 
-    overflow-x: visible;
-  
+	line-height: 96px;
 
-    color: #b30000;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    margin-top: 10px;
+	overflow-x: visible;
+
+	color: #b30000;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	margin-top: 10px;
 }
 
 .player > img {
@@ -102,7 +90,6 @@ margin: 0 auto 0 auto;
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
     box-shadow: 10px 10px 5px;
 }
-
 
 .card > img {
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
@@ -112,7 +99,7 @@ margin: 0 auto 0 auto;
 .centerButton
 {
 	text-align:center;
-	//background-color:red;
+
 	margin-top:-20px;
 	margin-bottom:-15px;
 }
@@ -130,7 +117,6 @@ margin: 0 auto 0 auto;
     text-shadow: 1px 1px 0 #000;
     margin-top: 5px;
     margin-bottom: 5px;
-    backgrounnd-color:yellow;
 }
 
 .message {
@@ -139,5 +125,4 @@ margin: 0 auto 0 auto;
 
     text-align: center;
     text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
-    //background-color:purple;
 }
