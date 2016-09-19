@@ -30,7 +30,7 @@ echo "<div class='gameContainer'>";
 // nested loop to print the hands of each player
 for ($i = 0; $i < count($playerHands); $i++)  {
 
-    echo "<div class='player'><img src='images/players/$pics[$i].jpg'></div>";
+    echo "<div class='player' class='playerImage'><img src='images/players/$pics[$i].jpg'></div>";
     echo "<div class='dealtHand'>";
     for ($j = 0; $j < count($playerHands[$i]); $j++) {
         echo "<div class='card'><img src='".$playerHands[$i][$j] . "'></div>";

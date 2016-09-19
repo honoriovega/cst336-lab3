@@ -1,86 +1,162 @@
 body {
-	margin: 0 auto 0 auto;
-	background-image: url(../images/poker-table-background.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+    margin: 0 auto 0 auto;
+    background-image: url(../images/poker-table-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-
 .gameContainer {
-	width: 725px;
-	margin: 0 auto 0 auto;
+    width: 725px;
+    margin: 0 auto 0 auto;
 }
-
 .player {
-	display: inline;
-	padding-right: 10px;
-	
-	width: 300px;
-	height: 300px;
+    display: inline;
+    margin-right: 10px;
+    width: 300px;
+    height: 300px;
 }
-
 .card {
-	display: inline;
-	margin: 0;
-	padding-right: 10px;
+    display: inline;
+    margin: 0;
+    padding-right: 10px;
 }
-
 .dealtHand {
-	display: inline;
-	width: 480px;
+    display: inline;
+    width: 480px;
 }
-
 .outcome {
-	float: right;
-	font-family:Roboto Slab;
-	font-size: 35px; 
-	font-weight: bold;
-	width: 120px;
-	margin-left: 0;
-	text-align: center;
-	overflow-x: visible;
-	display: table-cell;
+    float: right;
+    font-family: Roboto Slab;
+    font-size: 35px;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 0;
+    text-align: center;
+    overflow-x: visible;
+    display: table-cell;
     vertical-align: middle;
-	color:#b30000;
-	text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
-	margin-top:10px;
+    color: #b30000;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    margin-top: 10px;
 }
-
 .title {
-	text-align: center;
-	margin: 20px auto 20px auto;
+    text-align: center;
+    margin: 20px auto 20px auto;
 }
-
 .winner {
-	width: 100px;
+    width: 100px;
 }
-
-
 .score {
-	display: inline-block;
-	align: center;
-	float: right;
-	width: 44%;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	font-size: 250%;
+    display: inline-block;
+    align: center;
+    float: right;
+    width: 44%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 250%;
 }
-
 .message {
-	color:#b30000;
-	text-align:center;
-	text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    color: #b30000;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
 }
-
 .playAgain {
-background:    #3af73a;
-background:    -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
-background:    linear-gradient(#328e09, #3af73a 50%, #328e09);
-border-radius: 5px;
-color:         #fff;
-display:       inline-block;
-padding:       8px 20px;
-font:          normal 700 26px/1 "Calibri", sans-serif;
-text-align:    center;
-text-shadow:   1px 1px 0 #000;
+    background: #3af73a;
+    background: -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
+    background: linear-gradient(#328e09, #3af73a 50%, #328e09);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    font: normal 700 26px/1 "Calibri", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+}
+body {
+    margin: 0 auto 0 auto;
+    background-image: url(../images/poker-table-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.gameContainer {
+    width: 725px;
+    margin: 0 auto 0 auto;
+}
+.player {
+    display: inline;
+    margin-right: 10px;
+    width: 300px;
+    height: 300px;
+}
+.card {
+    display: inline;
+    margin: 0;
+    padding-right: 10px;
+}
+.dealtHand {
+    display: inline;
+    width: 480px;
+}
+.outcome {
+    float: right;
+    font-family: Roboto Slab;
+    font-size: 35px;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 0;
+    text-align: center;
+    overflow-x: visible;
+    display: table-cell;
+    vertical-align: middle;
+    color: #b30000;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    margin-top: 10px;
+}
+.title {
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+.winner {
+    width: 100px;
+}
+.score {
+    display: inline-block;
+    align: center;
+    float: right;
+    width: 44%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 250%;
+}
+.message {
+    color: #b30000;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+.playAgain {
+    background: #3af73a;
+    background: -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
+    background: linear-gradient(#328e09, #3af73a 50%, #328e09);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    font: normal 700 26px/1 "Calibri", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.card > img {
+    border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
+    box-shadow: 5px 5px 5px;
+}
+.player > img {
+    border-radius: 50%;
+    border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
+    box-shadow: 10px 10px 5px;
 }
