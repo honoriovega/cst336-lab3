@@ -3,11 +3,9 @@
 <head>
 <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 <title>Lab 3 - Silverjack</title>
-<link rel="stylesheet" type="text/css" href="css/theme.css">
-</head>
 
-<body>
-<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+
 <?php
 
 // our functions
@@ -19,40 +17,55 @@ $scores = [];
 dealHands($scores, $playerHands);
 
 // was it a tie ? who won ? was their no winner ?
+//$outcome = playOutcome($scores);
 $outcome = playOutcome($scores);
-
 $pics = array(1,2,3,4);
 shuffle($pics);
-
-// displays players and cards
+echo "<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>";
 echo "<div class='gameContainer'>";
+
 // nested loop to print the hands of each player
 for ($i = 0; $i < count($playerHands); $i++)  {
 
-    echo "<div class='player playerImage'><img src='images/players/$pics[$i].jpg'
-		  alt='pictureOfPlayer'></div>";
-    echo "<div class='dealtHand'>";
+	echo "<div class='row'>";
+	echo "<div class='player'><img src='images/players/$pics[$i].jpg'></div>";
+
     for ($j = 0; $j < count($playerHands[$i]); $j++) {
-        echo "<div class='card'><img src='".$playerHands[$i][$j] . "'
-			  alt='pictureOfCard'></div>";
-    }
-    // print their score
-    echo "<div class='outcome'><div class='outcome'>$scores[$i]";
-
-    // to display winner
-    echo $i == $outcome ? "</div><img class='winner'
-              src='images/Winner.png' alt='winnerImage'></div></div><br />" :
-                "</div></div></div><br />";
+		echo "<div class='card'><img src='".$playerHands[$i][$j]."'></div>";
     }
 
-echo "</div> ";
+	for($k = 0; $k < 6 - count($playerHands[$i]); $k++) {
+		echo "<div class='card'></div>";
+	}
 
+	echo "<div class='score'>$scores[$i]</div>";
+	echo "<div class='winner'>". ($outcome == $i ? "WINNER!" : "")."</div>";
 
-if ($outcome == - 1)
-    echo "<div class ='message'><h1>No Winner </h1></div>";
-else if ($outcome == - 2)
-    echo "<div class ='message'><h1>There was a tie </h1></div>";
+	echo "</div>";
+}
+
+echo "</div>";
+
+echo "<div class ='message'><h1>";
+
+if ($outcome == -1)
+    echo "No winner";
+else if ($outcome == -2)
+    echo "There was a tie";
+
+else
+	echo "";
+
+echo "</h1></div>";
 ?>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
 
 <script>
 function myFunction() {
@@ -66,4 +79,3 @@ function myFunction() {
 <!-- Button to refresh the page -->
 
 </body>
-</html>

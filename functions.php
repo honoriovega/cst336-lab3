@@ -61,6 +61,8 @@ function dealHands(&$scores, &$playerHands) {
 			array_push($dealtHand, $card);
 			$score+= basename($card, ".png");
 		}
+		
+
 
 		array_push($scores, $score);
 		array_push($playerHands, $dealtHand);
