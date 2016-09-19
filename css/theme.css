@@ -41,7 +41,7 @@ body {
 }
 .title {
     text-align: center;
-    margin: 20px auto 20px auto;
+    margin: 10px auto 10px auto;
 }
 .winner {
     width: 100px;
@@ -133,6 +133,9 @@ body {
     font-size: 250%;
 }
 .message {
+	display:ineline-block;
+	margin-top:-20px;
+	margin-bottom:-20px;
     color: #b30000;
     text-align: center;
     text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
@@ -159,4 +162,8 @@ body {
     border-radius: 50%;
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
     box-shadow: 10px 10px 5px;
+}
+
+.centerButton {
+	text-align:center;
 }

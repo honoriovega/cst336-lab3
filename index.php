@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div class='title'><img src='images/Silverjack.png'></div>
+<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>
 <?php
 
 // our functions
@@ -26,25 +26,27 @@ shuffle($pics);
 
 // displays players and cards
 echo "<div class='gameContainer'>";
-
 // nested loop to print the hands of each player
 for ($i = 0; $i < count($playerHands); $i++)  {
 
-    echo "<div class='player' class='playerImage'><img src='images/players/$pics[$i].jpg'></div>";
+    echo "<div class='player playerImage'><img src='images/players/$pics[$i].jpg'
+		  alt='pictureOfPlayer'></div>";
     echo "<div class='dealtHand'>";
     for ($j = 0; $j < count($playerHands[$i]); $j++) {
-        echo "<div class='card'><img src='".$playerHands[$i][$j] . "'></div>";
+        echo "<div class='card'><img src='".$playerHands[$i][$j] . "'
+			  alt='pictureOfCard'></div>";
     }
     // print their score
     echo "<div class='outcome'><div class='outcome'>$scores[$i]";
 
     // to display winner
-    echo $i == $outcome ? "</div><img class='winner' .
-              src='images/Winner.png'></div></div><br />" :
+    echo $i == $outcome ? "</div><img class='winner'
+              src='images/Winner.png' alt='winnerImage'></div></div><br />" :
                 "</div></div></div><br />";
     }
 
 echo "</div> ";
+
 
 if ($outcome == - 1)
     echo "<div class ='message'><h1>No Winner </h1></div>";
@@ -58,7 +60,10 @@ function myFunction() {
 }
 </script>
 <!-- Button to refresh the page -->
-<center><button onclick="myFunction()" class="playAgain">Play Again</button></center>
-<div class="mydiv"></div>
+<div class="centerButton">
+<button onclick="myFunction()" class="playAgain">Play Again</button>
+</div>
+<!-- Button to refresh the page -->
+
 </body>
 </html>
