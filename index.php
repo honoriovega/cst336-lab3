@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-<title>Lab 3</title>
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<title>Lab 3 - Silverjack</title>
 <link rel="stylesheet" type="text/css" href="css/theme.css">
 </head>
 
@@ -57,8 +58,7 @@ function myFunction() {
 }
 </script>
 <!-- Button to refresh the page -->
-<center><button onclick="myFunction()"
-    style="background-color:#66CD00">Play Again</button></center>
+<center><button onclick="myFunction()" class="playAgain">Play Again</button></center>
 <div class="mydiv"></div>
 </body>
 </html>

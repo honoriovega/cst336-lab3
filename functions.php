@@ -12,42 +12,42 @@ function occurences($target, $arr) {
 // winner ? tie ? no winner ? check here
 function playOutcome($scores) {
 
-    // Check if no winnner
-    if ($scores[0] > 42 && $scores[1] > 42 &&
-            $scores[2] > 42 && $scores[3] > 42) return -1;
+	// Check if no winnner
+	if ($scores[0] > 42 && $scores[1] > 42 &&
+			$scores[2] > 42 && $scores[3] > 42) return -1;
 
-    // Find the number greater closer to 42
-    $smallest = 1;
-    $saveIndex;
+	// Find the number greater closer to 42
+	$smallest = 1;
+	$saveIndex;
 
-    for ($i = 0; $i < 4; $i++) {
+	for ($i = 0; $i < 4; $i++) {
 
 		if ($scores[$i] > $smallest && $scores[$i] <= 42) {
 			$smallest = $scores[$i];
 			$saveIndex = $i;
 		}
-    }
+}
 
-    // Check if their is a tie
-    return occurences($smallest, $scores) > 1 ? -2 : $saveIndex;
+	// Check if their is a tie
+	return occurences($smallest, $scores) > 1 ? -2 : $saveIndex;
 }
 
 // All pass by reference values
 function dealHands(&$scores, &$playerHands) {
-    $cards = [];
+	$cards = [];
 
-    // get cards
-    $iterator = ['clubs', 'diamonds', 'hearts', 'spades'];
-    foreach($iterator as $suits) {
+	// get cards
+	$iterator = ['clubs', 'diamonds', 'hearts', 'spades'];
+	foreach($iterator as $suits) {
 
-        $directory = "images/cards/" . $suits;
+		$directory = "images/cards/" . $suits;
 
-        foreach(glob($directory . '/*.png') as $item)
-            array_push($cards, $item);
+		foreach(glob($directory . '/*.png') as $item)
+			array_push($cards, $item);
 	}
 
-    shuffle($cards);
-    $index = 0;
+	shuffle($cards);
+	$index = 0;
 
 	// deal hand to 4 players
 	for ($i = 0; $i < 4; $i++) {

@@ -75,3 +75,16 @@ body {
 	color:red;
 	text-align:center;
 }
+
+.playAgain {
+background:    #3af73a;
+background:    -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
+background:    linear-gradient(#328e09, #3af73a 50%, #328e09);
+border-radius: 5px;
+color:         #fff;
+display:       inline-block;
+padding:       8px 20px;
+font:          normal 700 26px/1 "Calibri", sans-serif;
+text-align:    center;
+text-shadow:   1px 1px 0 #000;
+}
