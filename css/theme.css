@@ -47,22 +47,20 @@ body {
     overflow-x: visible;
     overflow: hidden;
     color: #b30000;
-    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 3px black, 3px 0 black, 0 -1px black;
     margin-top: 10px;
 }
 .winner {
     width: 120px;
-    height: 96;
+    height: 96px;
     display: inline-block;
-    font-family: Roboto Slab;
     font-size: 23px;
     font-weight: bold;
     overflow: auto;
     line-height: 96px;
     overflow-x: visible;
-    color: #b30000;
-    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
     margin-top: 10px;
+    padding-left:4px;
 }
 .player > img {
     border-radius: 50%;
