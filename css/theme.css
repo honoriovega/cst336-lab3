@@ -22,6 +22,7 @@ body {
     width: 72px;
     height: 96px;
     padding-left: 12px;
+    position:static;
     display: inline-block;
 }
 .row {
@@ -71,6 +72,7 @@ body {
 .card > img {
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
     box-shadow: 5px 5px 5px;
+    position:static;
 }
 .centerButton {
     text-align: center;

@@ -1,19 +1,20 @@
 <!doctype html>
 <html>
-<head>
-<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
-<title>Lab 3 - Silverjack</title>
 
-<link rel="stylesheet" type="text/css" href="css/theme.css">
+<head>
+	<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+	<title>Lab 3 - Silverjack</title>
+
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
 
 </head>
 
 <body>
-<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>;
+	<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>;
 
-<div class="wrapper">
-<div class='gameContainer'>
-<?php
+	<div class="wrapper">
+		<div class='gameContainer'>
+			<?php
 
 include 'functions.php';
 
@@ -63,16 +64,17 @@ else
 echo "</h1></div>";
 ?>
 
-<script>
-function myFunction() {
-    location.reload();
-}
-</script>
-<!-- Button to refresh the page -->
-<div class="centerButton">
-<button onclick="myFunction()" class="playAgain">Play Again</button>
-</div>
-<!-- Button to refresh the page -->
+				<script>
+					function myFunction() {
+						location.reload();
+					}
+				</script>
+				<!-- Button to refresh the page -->
+				<div class="centerButton">
+					<button onclick="myFunction()" class="playAgain">Play Again</button>
+				</div>
+				<!-- Button to refresh the page -->
 
 </body>
+
 </html>
