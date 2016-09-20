@@ -1,17 +1,17 @@
-.title {
-    text-align: center;
-    margin: 10px auto 10px auto;
-
-    margin-bottom:-10px;
-}
-
-	body {
+body {
     margin: 0 auto 0 auto;
     background-image: url(../images/poker-table-background.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow:hidden;
+}
+
+.title {
+    text-align: center;
+    margin: 10px auto 10px auto;
+
+    margin-bottom:-10px;
 }
 
 .gameContainer {
@@ -59,7 +59,7 @@
     overflow-x: visible;
 overflow:hidden;
     color: #b30000;
-    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
     margin-top: 10px;
 
 }
@@ -71,7 +71,7 @@ overflow:hidden;
 
 	display:inline-block;
 	font-family: Roboto Slab;
-	font-size: 25px;
+	font-size: 23px;
 	font-weight: bold;
 
 	overflow: auto;
@@ -81,7 +81,7 @@ overflow:hidden;
 	overflow-x: visible;
 
 	color: #b30000;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
 	margin-top: 10px;
 }
 

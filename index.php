@@ -6,6 +6,13 @@
 
 <link rel="stylesheet" type="text/css" href="css/theme.css">
 
+
+
+</head>
+
+<body>
+<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>;
+<div class='gameContainer'>
 <?php
 
 // our functions
@@ -21,8 +28,8 @@ dealHands($scores, $playerHands);
 $outcome = playOutcome($scores);
 $pics = array(1,2,3,4);
 shuffle($pics);
-echo "<div class='title'><img src='images/rsz_2silverjack.png' alt='headingLogo'></div>";
-echo "<div class='gameContainer'>";
+
+
 
 // nested loop to print the hands of each player
 for ($i = 0; $i < count($playerHands); $i++)  {
@@ -58,12 +65,6 @@ else
 
 echo "</h1></div>";
 ?>
-
-</head>
-
-<body>
-
-
 
 
 <script>
