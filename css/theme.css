@@ -4,108 +4,79 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    overflow:hidden;
+    overflow: hidden;
 }
-
 .title {
     text-align: center;
     margin: 10px auto 10px auto;
-
-    margin-top:-5px;
-        margin-bottom:-25px;
+    margin-top: -5px;
+    margin-bottom: -25px;
 }
-
 .gameContainer {
-	width:800px;
-
-		margin: 0 auto 0 auto;
-
-	overflow:hidden;
-	text-align:center;
+    width: 800px;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    text-align: center;
 }
-
 .card {
-	width: 72px;
-	height: 96px;
-	padding-left:12px;
-
-	display:inline-block;
+    width: 72px;
+    height: 96px;
+    padding-left: 12px;
+    display: inline-block;
 }
-
 .row {
-
-	display:inline-block;
+    display: inline-block;
 }
-
 .player {
-
-	width:96px;
-	height:96px;
-	display:inline-block;
-	padding-right:10px;
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    padding-right: 10px;
 }
-
 .score {
-	width:50px;
-	height:96px;
-	display:inline-block;
-	overflow: auto;
-	padding-left:10px;
-
+    width: 50px;
+    height: 96px;
+    display: inline-block;
+    overflow: auto;
+    padding-left: 10px;
     font-family: Roboto Slab;
     font-size: 35px;
     font-weight: bold;
-
-	line-height: 96px;
-
+    line-height: 96px;
     overflow-x: visible;
-overflow:hidden;
+    overflow: hidden;
     color: #b30000;
     text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
     margin-top: 10px;
-
 }
-
-.winner
-{
-	width:120px;
-	height:96;
-
-	display:inline-block;
-	font-family: Roboto Slab;
-	font-size: 23px;
-	font-weight: bold;
-
-	overflow: auto;
-
-	line-height: 96px;
-
-	overflow-x: visible;
-
-	color: #b30000;
-	text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
-	margin-top: 10px;
+.winner {
+    width: 120px;
+    height: 96;
+    display: inline-block;
+    font-family: Roboto Slab;
+    font-size: 23px;
+    font-weight: bold;
+    overflow: auto;
+    line-height: 96px;
+    overflow-x: visible;
+    color: #b30000;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+    margin-top: 10px;
 }
-
 .player > img {
     border-radius: 50%;
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
     box-shadow: 10px 10px 5px;
 }
-
 .card > img {
     border: 2px -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
     box-shadow: 5px 5px 5px;
 }
-
-.centerButton
-{
-	text-align:center;
-
-	margin-top:-20px;
-	margin-bottom:-15px;
+.centerButton {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: -15px;
 }
-
 .playAgain {
     background: #3af73a;
     background: -webkit-linear-gradient(#328e09, #3af73a 50%, #328e09);
@@ -120,11 +91,14 @@ overflow:hidden;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
 .message {
     color: #b30000;
-    margin-top:-15px;
-
+    margin-top: -15px;
     text-align: center;
     text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+.winner > img {
+    width: 120px;
+    height: 96;
+    margin-bottom: -5px;
 }

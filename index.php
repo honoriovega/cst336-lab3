@@ -15,18 +15,17 @@
 <div class='gameContainer'>
 <?php
 
-// our functions
 include 'functions.php';
+
 
 $playerHands = [];
 $scores = [];
 
 dealHands($scores, $playerHands);
 
-// was it a tie ? who won ? was their no winner ?
-//$outcome = playOutcome($scores);
 $outcome = playOutcome($scores);
 $pics = array(1,2,3,4);
+
 shuffle($pics);
 
 // nested loop to print the hands of each player
@@ -44,7 +43,7 @@ for ($i = 0; $i < count($playerHands); $i++)  {
 	}
 
 	echo "<div class='score'>$scores[$i]</div>";
-	echo "<div class='winner'>". ($outcome == $i ? "WINNER!" : "")."</div>";
+	echo "<div class='winner'>". ($outcome == $i ? "<img src='images/Winner.png'": "")."</div>";
 
 	echo "</div>";
 }
