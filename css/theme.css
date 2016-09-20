@@ -11,13 +11,15 @@ body {
     text-align: center;
     margin: 10px auto 10px auto;
 
-    margin-bottom:-10px;
+    margin-top:-5px;
+        margin-bottom:-25px;
 }
 
 .gameContainer {
 	width:800px;
 
-	margin: 0 auto 0 auto;
+		margin: 0 auto 0 auto;
+
 	overflow:hidden;
 	text-align:center;
 }
